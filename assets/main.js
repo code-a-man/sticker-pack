@@ -12,9 +12,6 @@ Bu tabloda stickerları görebilir ve tıklayarak linkine ulaşabilirsiniz. Kull
 
 Original repo link: [free-gophers-pack](https://github.com/MariaLetta/free-gophers-pack)\n\n`;
 
-markdownContent +=
-  '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">\n';
-
 fs.readdir(svgFolder, (err, files) => {
   if (err) {
     console.error("Klasörü okurken bir hata oluştu:", err);
@@ -23,17 +20,19 @@ fs.readdir(svgFolder, (err, files) => {
 
   const svgFiles = files.filter((file) => path.extname(file) === ".svg");
 
-  svgFiles.forEach((file) => {
-    const filePath = path.join(svgFolder, file);
-    const imagePath = `${svgFolder}/${file}`;
-    markdownContent += `
-  <a href="${imagePath}" target="_blank" style="text-align: center; text-decoration: none;">
-    <img src="${imagePath}" alt="${file}" style="width: 100px; height: 100px; object-fit: contain;" />
-    <p style="font-size: 12px; color: #333;">${file}</p>
-  </a>\n`;
-  });
+  markdownContent += "| " + " Görsel |".repeat(4) + "\n";
+  markdownContent += "| " + "------- |".repeat(4) + "\n";
 
-  markdownContent += "</div>\n";
+  for (let i = 0; i < svgFiles.length; i++) {
+    const imagePath = `${svgFolder}/${svgFiles[i]}`;
+    markdownContent += `| ![${svgFiles[i]}](${imagePath}) `;
+    if ((i + 1) % 4 === 0) markdownContent += "|\n";
+  }
+
+  const remainingCells = svgFiles.length % 4;
+  if (remainingCells > 0) {
+    markdownContent += "| ".repeat(4 - remainingCells) + "|\n";
+  }
 
   fs.writeFile(outputMarkdownFile, markdownContent, (err) => {
     if (err) {
