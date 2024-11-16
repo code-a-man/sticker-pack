@@ -20,8 +20,9 @@ fs.readdir(svgFolder, (err, files) => {
 
   const svgFiles = files.filter((file) => path.extname(file) === ".svg");
 
-  markdownContent += "| " + " Görsel |".repeat(4) + "\n";
-  markdownContent += "| " + "------- |".repeat(4) + "\n";
+  markdownContent +=
+    "| " + " -------------------------------- |".repeat(4) + "\n";
+  markdownContent += "| " + "---------- |".repeat(4) + "\n";
 
   for (let i = 0; i < svgFiles.length; i++) {
     const imagePath = `${svgFolder}/${svgFiles[i]}`;

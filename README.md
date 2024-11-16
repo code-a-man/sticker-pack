@@ -6,8 +6,8 @@ Bu tabloda stickerları görebilir ve tıklayarak linkine ulaşabilirsiniz. Kull
 
 Original repo link: [free-gophers-pack](https://github.com/MariaLetta/free-gophers-pack)
 
-|  Görsel | Görsel | Görsel | Görsel |
-| ------- |------- |------- |------- |
+|  -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
+| ---------- |---------- |---------- |---------- |
 | ![characters-svg-1.svg](./svg/characters-svg-1.svg) | ![characters-svg-10.svg](./svg/characters-svg-10.svg) | ![characters-svg-11.svg](./svg/characters-svg-11.svg) | ![characters-svg-12.svg](./svg/characters-svg-12.svg) |
 | ![characters-svg-13.svg](./svg/characters-svg-13.svg) | ![characters-svg-14.svg](./svg/characters-svg-14.svg) | ![characters-svg-15.svg](./svg/characters-svg-15.svg) | ![characters-svg-16.svg](./svg/characters-svg-16.svg) |
 | ![characters-svg-17.svg](./svg/characters-svg-17.svg) | ![characters-svg-18.svg](./svg/characters-svg-18.svg) | ![characters-svg-19.svg](./svg/characters-svg-19.svg) | ![characters-svg-2.svg](./svg/characters-svg-2.svg) |
